@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Todoflix/static/css/main.461711eb.css",
-    "main.js": "/Todoflix/static/js/main.f4d2a032.js",
-    "static/js/787.28cb0dcd.chunk.js": "/Todoflix/static/js/787.28cb0dcd.chunk.js",
-    "static/media/Rocketman.png": "/Todoflix/static/media/Rocketman.fc7b557ebda2ce4c023d.png",
-    "static/media/FugaDasGalinhas.png": "/Todoflix/static/media/FugaDasGalinhas.9f9350158c2a49c23a4d.png",
-    "static/media/AmarELO.png": "/Todoflix/static/media/AmarELO.5c2dbc7f370748aeb7a7.png",
-    "static/media/CapitaoFantastico.png": "/Todoflix/static/media/CapitaoFantastico.176ecb0e73c0be39d01f.png",
-    "static/media/Shrek.png": "/Todoflix/static/media/Shrek.2205029a9742bbc73e9e.png",
-    "static/media/SpiderMan.png": "/Todoflix/static/media/SpiderMan.387395969a387272fafe.png",
-    "static/media/HojeEuQueroVoltarSozinho.png": "/Todoflix/static/media/HojeEuQueroVoltarSozinho.ed68bde8ecc13abbdcb8.png",
-    "static/media/QueHorasElaVolta.png": "/Todoflix/static/media/QueHorasElaVolta.e0c9c445df42df5ea857.png",
-    "static/media/SonhoDeLiberdade.png": "/Todoflix/static/media/SonhoDeLiberdade.b7ec0482b0f299b8d0b2.png",
-    "static/media/AguasSelvagens.jpg": "/Todoflix/static/media/AguasSelvagens.c026d96d52f672182727.jpg",
-    "static/media/Infiltrado.jpg": "/Todoflix/static/media/Infiltrado.504e6dcb190aa0f2680c.jpg",
-    "static/media/choke.jpg": "/Todoflix/static/media/choke.59e7a223f93591c4dd45.jpg",
-    "static/media/Pinoquio.jpg": "/Todoflix/static/media/Pinoquio.8c5ef523b5612ccde924.jpg",
-    "index.html": "/Todoflix/index.html",
-    "main.461711eb.css.map": "/Todoflix/static/css/main.461711eb.css.map",
-    "main.f4d2a032.js.map": "/Todoflix/static/js/main.f4d2a032.js.map",
-    "787.28cb0dcd.chunk.js.map": "/Todoflix/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/static/css/main.461711eb.css",
+    "main.js": "/static/js/main.4a780c25.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Rocketman.png": "/static/media/Rocketman.fc7b557ebda2ce4c023d.png",
+    "static/media/FugaDasGalinhas.png": "/static/media/FugaDasGalinhas.9f9350158c2a49c23a4d.png",
+    "static/media/AmarELO.png": "/static/media/AmarELO.5c2dbc7f370748aeb7a7.png",
+    "static/media/CapitaoFantastico.png": "/static/media/CapitaoFantastico.176ecb0e73c0be39d01f.png",
+    "static/media/Shrek.png": "/static/media/Shrek.2205029a9742bbc73e9e.png",
+    "static/media/SpiderMan.png": "/static/media/SpiderMan.387395969a387272fafe.png",
+    "static/media/HojeEuQueroVoltarSozinho.png": "/static/media/HojeEuQueroVoltarSozinho.ed68bde8ecc13abbdcb8.png",
+    "static/media/QueHorasElaVolta.png": "/static/media/QueHorasElaVolta.e0c9c445df42df5ea857.png",
+    "static/media/SonhoDeLiberdade.png": "/static/media/SonhoDeLiberdade.b7ec0482b0f299b8d0b2.png",
+    "static/media/AguasSelvagens.jpg": "/static/media/AguasSelvagens.c026d96d52f672182727.jpg",
+    "static/media/Infiltrado.jpg": "/static/media/Infiltrado.504e6dcb190aa0f2680c.jpg",
+    "static/media/choke.jpg": "/static/media/choke.59e7a223f93591c4dd45.jpg",
+    "static/media/Pinoquio.jpg": "/static/media/Pinoquio.8c5ef523b5612ccde924.jpg",
+    "index.html": "/index.html",
+    "main.461711eb.css.map": "/static/css/main.461711eb.css.map",
+    "main.4a780c25.js.map": "/static/js/main.4a780c25.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.461711eb.css",
-    "static/js/main.f4d2a032.js"
+    "static/js/main.4a780c25.js"
   ]
 }
