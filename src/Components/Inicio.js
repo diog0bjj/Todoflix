@@ -11,7 +11,7 @@ import capitaoFantastico from "../Assets/CapitaoFantastico.png"
 import fugaDasGalinhas from "../Assets/FugaDasGalinhas.png"
 import shrekPoster from "../Assets/Shrek.png"
 import favorite from "../Assets/favorite.png"
-import {faThumbsUp, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faThumbsUp, faSearch, faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -52,7 +52,7 @@ height:15rem;
 margin-top:0.5rem;
 
 &:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }`
 
 const Poster = styled.img`
@@ -80,7 +80,7 @@ aling-items:center;`
 
 const SearchBar =styled.input`
 padding-left:1rem;
-width:25vw;
+width:20vw;
 height:2rem;
 border-radius:6px;
 background-color:#2C2C2C;
@@ -93,7 +93,7 @@ position:absolute;
 background-color:#2C2C2C;
 border-radius:6px;
 padding-left:0.2rem;
-width:27vw;
+width:22vw;
 left:66.5%;
 bottom:93%;`
 
@@ -117,6 +117,11 @@ width:11.5rem;
 display:flex;
 flex-wrap:wrap;
 align-items:center;`
+
+const CarouselBtn = styled.button`
+background: transparent;
+width:2rem;
+height:2rem;`
 
 export default class Inicio extends React.Component{
   state={
@@ -163,6 +168,7 @@ export default class Inicio extends React.Component{
       name:'Capitao Fantastico',
       image:<Pic src={capitaoFantastico} alt ="poster do filme: Capitão-Fantástico"/>,
       overview:'Nas florestas do estado de Washington, um pai cria seus seis filhos longe da civilização, em uma rígida rotina de aventuras. Ele é forçado a deixar o isolamento e leva sua família para encarar o mundo, desafiando sua ideia do que significa ser pai.',
+      rating:'5/5'
     }
     ],
     myMovies:[],
@@ -214,7 +220,7 @@ export default class Inicio extends React.Component{
         return(
           <Main>
             <Searching>
-              <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faSearch} transform=" down-1" ></FontAwesomeIcon>
              <Link to="/Todos"><SearchBar value={this.state.movies.name} placeholder= 'Pesquisar'/> </Link>
             </Searching>
           <LastMovie>
@@ -229,7 +235,10 @@ export default class Inicio extends React.Component{
                 <h4>Visto recentemente</h4>
                 <li><h1>{item.name}</h1></li>
                 <Overview>{item.overview}</Overview>
-                <li>Rating</li>
+                <RatingSection>
+                      <h6>{item.rating}</h6>
+                      <FontAwesomeIcon icon={faThumbsUp}/>
+                    </RatingSection>
               </PrincipalInfos>
             </Spotlight>
           ))}
@@ -241,12 +250,18 @@ export default class Inicio extends React.Component{
             <Carousel
             width={"100%"}
             wrapAround={true}
-            slidesToShow ={4.5}
+            slidesToShow ={4.9}
             slideWidth={0.2}
             autoplay={true}
             autoplayInterval={2000}
             enableKeyboardControls={true}
             pauseOnHover={true}
+            renderCenterLeftControls={({ previousSlide }) => (
+              <CarouselBtn onClick={previousSlide}><FontAwesomeIcon icon={faAngleLeft} size="3x" transform="up-20"></FontAwesomeIcon></CarouselBtn>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <CarouselBtn onClick={nextSlide}><FontAwesomeIcon icon={faAngleRight}  size="3x" transform="up-20"></FontAwesomeIcon></CarouselBtn>
+            )}
             >
             {this.state.myMovies.map((item) => (
               <Exibtion>
@@ -259,7 +274,7 @@ export default class Inicio extends React.Component{
                     </Principal>
                     <RatingSection>
                       <h6>{item.rating}</h6>
-                      <FontAwesomeIcon icon={faThumbsUp}></FontAwesomeIcon>
+                      <FontAwesomeIcon icon={faThumbsUp}/>
                     </RatingSection>
                   </Title>
                   <Overview>{item.overview}</Overview>

@@ -73,9 +73,13 @@ display:flex;
 background-color:#000;
 align-items:center;
 height:2rem;
-border-radius:6px;`
+border-radius:6px;
+position:relative;
+&:hover ul{
+  display: block;
+}`
 
-const Teste = styled.li`
+const Category = styled.li`
 position:relative;
 &:hover ul{
   display: block;
@@ -100,9 +104,15 @@ const DropBtn = styled.button`
 background-color:#000;
 height:10rem;`
 
-const AccountBtn = styled.button`
-height:2rem;
-background-color:purple;` 
+const AccountBtn = styled.div`
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:2.1rem;
+width:6.5rem;
+&:hover  OtherProfiles{
+  display: block;
+}`
 
 const ModalItems = styled.div`
 border:solid blue;
@@ -113,6 +123,45 @@ width:50vw;
 display:flex;
 justify-content:center;`
 
+const OtherProfiles =styled.ul`
+position:absolute;
+width:7rem;
+height:8rem;
+top:100%;
+right:1%;
+display:none;`
+
+const ListAccounts = styled.li`
+display:Flex;
+justify-content:flex-end;
+align-items:center;
+padding:0.3rem 0.2rem 0 0;
+
+
+&:hover{
+  background-color: rgba(169,169,169, 0.1);
+}`
+
+const OnCircle = styled.div`
+width:0.5rem;
+height:0.5rem;
+background-color:green;
+border-radius:50%;`
+
+const OffCircle = styled.div`
+width:0.5rem;
+height:0.5rem;
+background-color:red;
+border-radius:50%;`
+
+const Profileimg = styled.img`
+margin: 0 0.9rem 0 0.7rem;
+
+&:hover{
+  transform: scale(1.1);
+  border:solid white;
+  border-width:thin;
+}`
 
 export default class Header extends React.Component{
 
@@ -139,14 +188,14 @@ onCloseModal = e =>{
                     <Navegation>
                       <li><Logo src={logo} alt="logo do site todoflix"/></li>
                       <li><Link to="./">inicio</Link></li>
-                      <Teste><DropBtn>Categorias <MdArrowDropDown/></DropBtn>
+                      <Category><DropBtn>Categorias <MdArrowDropDown/></DropBtn>
                         <Subs>
                           <Pages><Link to="./Todos">todos</Link></Pages>
                           <Pages><Link to="/Vistos">Já Vistos</Link></Pages>
                           <Pages><Link to="/Favoritos">Favoritos</Link></Pages>
                           <Pages><Link to="/Adicionados">Adicionados</Link></Pages>
                         </Subs>
-                      </Teste>
+                      </Category>
                     </Navegation>
                   </Tittles>
                   <AddInfos>
@@ -164,12 +213,15 @@ onCloseModal = e =>{
                     </div>
                     <Proflie>
                       <AccountBtn>
-                        <img src={account} alt="imagem do perfil" />
+                        <h5>Diogo</h5>
+                        <img src={account} alt="imagem do perfil" /><MdArrowDropDown/>
                       </AccountBtn>
-                      <MdArrowDropDown/>
-                      <div>
-                      </div>
-                      </Proflie>
+                      <OtherProfiles>
+                        <ListAccounts><h5>Diogo</h5><Profileimg src={account} alt="imagem do perfil" /><OnCircle></OnCircle></ListAccounts>
+                        <ListAccounts><h5>T3</h5><Profileimg src={account} alt="imagem do perfil" /><OffCircle></OffCircle></ListAccounts>
+                        <ListAccounts><h5>Eterna T4 </h5><Profileimg src={account} alt="imagem do perfil" /><OffCircle></OffCircle></ListAccounts>
+                      </OtherProfiles>
+                    </Proflie>
                   </AddInfos>
                 </Menu>
               </Head>
