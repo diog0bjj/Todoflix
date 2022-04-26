@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Carousel from 'nuka-carousel';
 
-
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import spiderMan from "../Assets/SpiderMan.png"
 import sonhoDeLiberdade from "../Assets/SonhoDeLiberdade.png"
 import queHorasElaVolta from "../Assets/QueHorasElaVolta.png"
@@ -215,7 +215,7 @@ export default class Inicio extends React.Component{
           <Main>
             <Searching>
               <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-              <SearchBar onChange={this.search} value={this.state.movies.name} placeholder= 'Pesquisar'/>
+             <Link to="/Todos"><SearchBar value={this.state.movies.name} placeholder= 'Pesquisar'/> </Link>
             </Searching>
           <LastMovie>
             {this.state.spotlightMovie.map((item) => (
