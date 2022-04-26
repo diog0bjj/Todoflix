@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://diog0bjj.github.io/Todoflix",
+  "homepage": "http://diog0bjj.github.io/Todoflix/",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
