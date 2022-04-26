@@ -7,6 +7,11 @@ import {Modal}  from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Adicionados from "./Adicionados";
+import Todos from "./Todos";
+import Favoritos from "./Favoritos";
+import Vistos from "./Vistos";
+import Inicio from "./Inicio";
 
 
 import logo from "../Assets/Todoflix.png"
@@ -125,6 +130,7 @@ onCloseModal = e =>{
 
   render(){
     return(
+      <Router>
           <div>
               <Head>
                 <Globalstyle />
@@ -167,7 +173,15 @@ onCloseModal = e =>{
                   </AddInfos>
                 </Menu>
               </Head>
+              <Routes>
+                <Route path="/Adicionados" element={<Adicionados />} />
+                <Route path="/Favoritos" element={<Favoritos />} />
+                <Route path="/Todos" element={<Todos />} />
+                <Route path="/vistos" element={<Vistos />} />
+                <Route path="/" element={<Inicio/>} />
+            </Routes>
           </div>
+          </Router>
        
     )}
 }

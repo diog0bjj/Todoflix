@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Carousel from 'nuka-carousel';
-import { BrowserRouter as Link} from "react-router-dom";
+
 
 import spiderMan from "../Assets/SpiderMan.png"
 import sonhoDeLiberdade from "../Assets/SonhoDeLiberdade.png"
@@ -162,7 +162,6 @@ export default class Inicio extends React.Component{
     });
   }
 
-  //console.log(myMovies)
   search = (event) => {
     const {myMovies, movies } = this.state
 
